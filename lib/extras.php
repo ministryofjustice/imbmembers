@@ -99,8 +99,8 @@ add_filter('embed_oembed_html', __NAMESPACE__ . '\\wrap_embed_with_div');
  * Don't allow subscribers to access wp-admin
  */
 function disable_wp_admin_for_subscribers()
-{
-    if (current_user_can('subscriber') && (!defined('DOING_AJAX') || !DOING_AJAX)) {
+{    
+    if (!current_user_can('edit_posts') && (!defined('DOING_AJAX') || !DOING_AJAX)) {
         wp_redirect(home_url());
         exit;
     }

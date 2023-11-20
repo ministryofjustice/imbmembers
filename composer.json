@@ -1,0 +1,6 @@
+{
+    "name": "ministryofjustice/imbmembers",
+    "description": "IMB Members theme",
+    "type": "wordpress-theme",
+    "require": {}
+}

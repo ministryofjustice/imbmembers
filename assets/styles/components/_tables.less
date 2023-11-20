@@ -1,0 +1,27 @@
+.wp-block-table table {
+
+	th,td {
+		padding: 12px;
+	}
+	th {
+		font-weight: 700;
+		color: #0b0c0c;
+		font-size: larger;
+	}
+}
+.wp-block-table.is-style-regular table {
+	border: 1px solid;
+
+	th,td {
+		&:not(:last-child) {
+			border-right: 1px solid;
+		}
+	}
+	th,
+	tr:not(:last-child) td{
+		border-bottom: 1px solid;
+	}
+	tfoot td {
+		border-top: 1px solid;
+	}
+}

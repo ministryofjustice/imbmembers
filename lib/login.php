@@ -14,16 +14,6 @@ function login_head()
 {
     ?>
   <style>
-    /* Login header logo */
-    #login h1 a, .login h1 a {
-      text-indent: 0;
-      background-image: none;
-      width: auto;
-      height: auto;
-      color: #000;
-      font-weight: bold;
-    }
-
     /* Hide 'back to blog' link */
     #backtoblog {
       display: none;
@@ -88,23 +78,6 @@ function login_form_gettext($translated_text, $text, $domain)
 
     return $translated_text;
 }
-
-/**
- * Change the header link.
- *
- * @return string|void
- */
-function login_header_link()
-{
-    return home_url();
-}
-add_filter('login_headerurl', __NAMESPACE__ . '\\login_header_link');
-
-function login_header_link_title()
-{
-    return '';
-}
-add_filter('login_headertitle', __NAMESPACE__ . '\\login_header_link_title');
 
 /**
  * Require users to be logged in before seeing the site
